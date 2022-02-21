@@ -1,9 +1,10 @@
 import React from 'react';
+import './App.css';
 
 function App() {
     return (
-        <div>
-            <h1 className="bg-center">Hello World</h1>
+        <div className="grid place-items-center h-screen">
+            <h1>Hello World</h1>
         </div>
     )
 }
