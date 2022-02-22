@@ -11,16 +11,14 @@ import {
     Outlet,
 } from "react-router-dom";
 
+
 export default function App() {
     return(
         <div>
-            <nav>
-                <ul>
-                <Link to="/">Home</Link>
-                </ul><ul>
-                <Link to="/blogs">Blogs</Link>
-                </ul>
-            </nav>
+            <div id="topbar" className="relative">
+                <ul><Link to="/">Home</Link></ul>
+                <ul><Link to="/blogs">Blogs</Link></ul>
+            </div>
             <Outlet/>
         </div>
     );
