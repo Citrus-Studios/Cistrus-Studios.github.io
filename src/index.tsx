@@ -15,10 +15,9 @@ import {
 export default function App() {
     return(
         <div>
-            <div id="topbar" className="relative">
-                <ul><Link to="/">Home</Link></ul>
-                <ul><Link to="/blogs">Blogs</Link></ul>
-            </div>
+            <div className="toprect2"></div>
+            <div className="toprect1"></div>
+            <div className="bottomrect"></div>
             <Outlet/>
         </div>
     );
