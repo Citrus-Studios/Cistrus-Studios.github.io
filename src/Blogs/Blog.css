@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 .blog {
+  position: relative;
   width: 75%;
   padding: 10px;
   margin: 10px;

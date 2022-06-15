@@ -13,13 +13,18 @@ import {
 
 
 export default function App() {
-    return(
-        <div>
+    return (
+        <header>
             <div className="toprect2"></div>
             <div className="toprect1"></div>
-            <div className="bottomrect"></div>
-            <Outlet/>
-        </div>
+            <div className="transparentrect"></div>
+            <div className="backgroundimage"></div>
+            <nav className="topnav">
+                <Link className="topbarbutton navbuttons" to="/">Home</Link>
+                <Link className="topbarbutton navbuttons" to="/blogs">Blogs</Link>
+            </nav>
+            <Outlet />
+        </header>
     );
 }
 

@@ -1,26 +1,17 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@font-face {
+  font-family: 'Calistoga';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/calistoga/v10/6NUU8F2OJg6MeR7l4e0vtA.ttf) format('truetype');
+}
 ul {
   padding: 10px;
   display: inline-block;
   position: relative;
-}
-nav {
-  color: #73ef81;
-}
-.rotate {
-  width: 80px;
-  height: 80px;
-  animation: rotation infinite 3s linear;
-}
-@keyframes rotation {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
 }
 .toprect1 {
   position: absolute;
@@ -43,9 +34,78 @@ nav {
 }
 .bottomrect {
   position: absolute;
+  z-index: 10;
   width: 100%;
   height: 242px;
   left: 0px;
   bottom: 0px;
   background: #FFBE5B;
+}
+.transparentrect {
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  background: #FFE176;
+  opacity: 0.8;
+}
+.backgroundimage {
+  position: absolute;
+  z-index: -2;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  background-image: url('/public/lemonbackground.jpeg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.lemonslice {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 50;
+}
+.fancytext {
+  font-family: 'Calistoga';
+  font-style: normal;
+  font-weight: 400;
+  color: #000000;
+}
+.citrusstudiostext {
+  display: block;
+  text-align: center;
+  z-index: 100;
+  left: 50%;
+  top: 18%;
+  font-size: 3.5em;
+  font-family: 'Calistoga';
+  font-style: normal;
+  font-weight: 400;
+  color: #000000;
+}
+.topnav {
+  display: flex;
+}
+.topbarbutton {
+  position: relative;
+  display: flex;
+  z-index: 100;
+  background: #FFCC47;
+  width: 282px;
+  height: 52px;
+  margin: 10px;
+  border-radius: 15px;
+  font-size: 2.5em;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Calistoga';
+  font-style: normal;
+  font-weight: 400;
+  color: #000000;
+}
+.navbuttons {
+  position: relative;
 }
