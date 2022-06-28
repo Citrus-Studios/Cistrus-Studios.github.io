@@ -2,6 +2,7 @@ use yew::prelude::*;
 
 enum Msg {}
 
+#[derive(Debug)]
 struct Model {
     value: i64,
 }
@@ -19,6 +20,7 @@ impl Component for Model {
     }
 
     fn view(&self, ctx: &Context<Self>) -> Html {
+        println!("{ctx:#?}");
         html! {}
     }
 }
