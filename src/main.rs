@@ -13,9 +13,9 @@ pub struct Props<T: PartialEq> {
 }
 
 #[derive(Debug)]
-struct Model {}
+struct App {}
 
-impl Component for Model {
+impl Component for App {
     type Message = Msg;
     type Properties = ();
 
@@ -36,5 +36,5 @@ impl Component for Model {
 }
 
 fn main() {
-    yew::start_app::<Model>();
+    yew::start_app::<App>();
 }
