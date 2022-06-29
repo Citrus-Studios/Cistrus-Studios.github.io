@@ -5,12 +5,12 @@ use yew::prelude::*;
 pub mod bindings;
 pub mod custom_components;
 
-enum Msg {}
-
 #[derive(Properties, PartialEq)]
 pub struct Props<T: PartialEq> {
     data: T,
 }
+
+enum Msg {}
 
 #[derive(Debug)]
 struct App {}
