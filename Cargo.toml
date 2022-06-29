@@ -7,4 +7,6 @@ edition = "2021"
 
 [dependencies]
 yew = "0.19.3"
+stylist = "0.10"
+
 wasm-bindgen = "0.2.81"
