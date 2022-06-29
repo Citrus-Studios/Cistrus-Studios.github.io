@@ -3,8 +3,16 @@ use yew::prelude::*;
 enum Msg {}
 
 #[derive(Debug)]
-struct Model {
-    value: i64,
+struct Model {}
+
+mod console {
+    use wasm_bindgen::prelude::wasm_bindgen;
+
+    #[wasm_bindgen]
+    extern "C" {
+        #[wasm_bindgen(js_namespace = console)]
+        pub fn log(s: &str);
+    }
 }
 
 impl Component for Model {
@@ -12,15 +20,15 @@ impl Component for Model {
     type Properties = ();
 
     fn create(_ctx: &Context<Self>) -> Self {
-        Self { value: 0 }
+        Self {}
     }
 
-    fn update(&mut self, _ctx: &Context<Self>, msg: Self::Message) -> bool {
+    fn update(&mut self, _ctx: &Context<Self>, _msg: Self::Message) -> bool {
         false
     }
 
     fn view(&self, ctx: &Context<Self>) -> Html {
-        println!("{ctx:#?}");
+        console::log(format!("{ctx:#?}").as_str());
         html! {}
     }
 }
