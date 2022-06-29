@@ -1,19 +1,19 @@
+use crate::custom_components::*;
+use bindings::console;
 use yew::prelude::*;
+
+pub mod bindings;
+pub mod custom_components;
 
 enum Msg {}
 
+#[derive(Properties, PartialEq)]
+pub struct Props<T: PartialEq> {
+    data: T,
+}
+
 #[derive(Debug)]
 struct Model {}
-
-mod console {
-    use wasm_bindgen::prelude::wasm_bindgen;
-
-    #[wasm_bindgen]
-    extern "C" {
-        #[wasm_bindgen(js_namespace = console)]
-        pub fn log(s: &str);
-    }
-}
 
 impl Component for Model {
     type Message = Msg;
@@ -29,7 +29,9 @@ impl Component for Model {
 
     fn view(&self, ctx: &Context<Self>) -> Html {
         console::log(format!("{ctx:#?}").as_str());
-        html! {}
+        html! {
+            <RedText<String> data={"mommy"}/>
+        }
     }
 }
 
